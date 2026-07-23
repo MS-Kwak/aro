@@ -20,19 +20,17 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className={cn(
             'flex h-11 w-full rounded-xl border bg-white px-4 py-2 text-sm outline-none transition placeholder:text-gray-400',
             error
-              ? 'border-[var(--color-error)] focus:ring-1 focus:ring-[var(--color-error)]'
-              : 'border-gray-200 focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)]',
-            className
+              ? 'border-error focus:ring-1 focus:ring-error'
+              : 'border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary',
+            className,
           )}
           ref={ref}
           {...props}
         />
-        {error && (
-          <p className="text-caption text-[var(--color-error)]">{error}</p>
-        )}
+        {error && <p className="text-caption text-error">{error}</p>}
       </div>
     );
-  }
+  },
 );
 Input.displayName = 'Input';
 
