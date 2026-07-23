@@ -108,7 +108,7 @@ export default function SignupPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)]"
+            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
           />
           <input
             type="password"
@@ -116,7 +116,7 @@ export default function SignupPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)]"
+            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
           />
           <input
             type="password"
@@ -124,12 +124,12 @@ export default function SignupPage() {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)]"
+            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
           />
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full rounded-xl bg-[var(--color-primary)] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[var(--color-primary-hover)] disabled:opacity-50"
+            className="w-full rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white transition hover:bg-primary-hover disabled:opacity-50"
           >
             {isLoading ? '처리 중...' : '이메일로 가입하기'}
           </button>
@@ -138,7 +138,7 @@ export default function SignupPage() {
 
       <p className="mt-6 text-center text-caption text-gray-500">
         이미 계정이 있으신가요?{' '}
-        <Link href="/login" className="font-medium text-[var(--color-primary)] hover:underline">
+        <Link href="/login" className="font-medium text-primary hover:underline">
           로그인
         </Link>
       </p>
