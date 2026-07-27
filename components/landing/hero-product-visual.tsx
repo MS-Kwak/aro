@@ -42,7 +42,7 @@ export function HeroProductVisual() {
                   오늘의 가게
                 </p>
                 <p className="mt-0.5 text-heading-3 text-white">
-                  아로의 카페
+                  이든의 카페
                 </p>
               </div>
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">

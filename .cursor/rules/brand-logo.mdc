@@ -1,0 +1,12 @@
+---
+description: 아로 로고는 축약 심볼을 기본으로 사용한다
+alwaysApply: true
+---
+
+# 브랜드 로고
+
+- **기본:** `AroLogo` — 축약 심볼만 (`showWordmark` 기본 `false`)
+- **워드마크 「아로」:** 히어로처럼 첫 브랜드 시그널이 꼭 필요할 때만 `showWordmark`
+- **다크/네이비 배경:** `variant="white"`
+- **full 로고** (`logo-aro-full*.svg`)는 인쇄물·앱스토어·공식 문서처럼 태그라인이 필요할 때만
+- 헤더, 사이드바, 로그인/회원가입, 푸터, CTA는 심볼만

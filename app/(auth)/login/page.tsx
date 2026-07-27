@@ -2,8 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { signInWithKakao, signInWithEmail } from '@/lib/supabase/auth-actions';
+import { AroLogo } from '@/components/brand/aro-logo';
+import {
+  signInWithKakao,
+  signInWithEmail,
+} from '@/lib/supabase/auth-actions';
+
+const inputClassName =
+  'w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none placeholder:text-gray-500 focus:border-primary focus:ring-1 focus:ring-primary';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -35,17 +41,13 @@ export default function LoginPage() {
 
   return (
     <div className="rounded-2xl bg-white p-8 shadow-sm">
-      <div className="flex justify-center mb-6">
-        <Image
-          src="/logo-aro-full.svg"
-          alt="ARO"
-          width={120}
-          height={40}
-          priority
-        />
+      <div className="mb-6 flex justify-center">
+        <AroLogo href="/" size="md" priority />
       </div>
 
-      <h1 className="text-heading-2 text-center text-gray-900">로그인</h1>
+      <h1 className="text-heading-2 text-center text-gray-900">
+        로그인
+      </h1>
       <p className="mt-2 text-body text-center text-gray-500">
         아로(ARO)에 오신 것을 환영합니다
       </p>
@@ -79,14 +81,17 @@ export default function LoginPage() {
             이메일로 로그인
           </button>
         ) : (
-          <form onSubmit={handleEmailLogin} className="space-y-3 pt-2">
+          <form
+            onSubmit={handleEmailLogin}
+            className="space-y-3 pt-2"
+          >
             <input
               type="email"
               placeholder="이메일"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+              className={inputClassName}
             />
             <input
               type="password"
@@ -94,7 +99,7 @@ export default function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+              className={inputClassName}
             />
             <button
               type="submit"

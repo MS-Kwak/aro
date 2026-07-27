@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard,
@@ -12,6 +11,7 @@ import {
   CreditCard,
   Settings,
 } from 'lucide-react';
+import { AroLogo } from '@/components/brand/aro-logo';
 import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
@@ -30,15 +30,7 @@ export function Sidebar() {
   return (
     <aside className="hidden md:flex w-60 flex-col border-r border-gray-200 bg-white">
       <div className="flex h-16 items-center px-6">
-        <Link href="/dashboard">
-          <Image
-            src="/logo-aro-full.svg"
-            alt="ARO"
-            width={100}
-            height={32}
-            priority
-          />
-        </Link>
+        <AroLogo href="/dashboard" size="md" priority />
       </div>
 
       <nav className="flex-1 px-3 py-4 space-y-1">

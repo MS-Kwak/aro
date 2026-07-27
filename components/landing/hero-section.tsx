@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { AroLogo } from '@/components/brand/aro-logo';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/landing/scroll-reveal';
 import { HeroProductVisual } from '@/components/landing/hero-product-visual';
@@ -26,16 +26,7 @@ export function HeroSection() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:pb-24 lg:pt-20">
         <div>
           <ScrollReveal>
-            <div className="flex items-center gap-3">
-              <Image
-                src="/logo-aro-full.svg"
-                alt="아로(ARO)"
-                width={120}
-                height={40}
-                priority
-                className="h-9 w-auto sm:h-11"
-              />
-            </div>
+            <AroLogo href={null} size="lg" showWordmark priority />
           </ScrollReveal>
 
           <ScrollReveal delay={0.08}>

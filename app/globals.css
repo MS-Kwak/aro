@@ -38,11 +38,10 @@
   --color-gray-900: #1a1a2e;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1a2e;
-    --foreground: #e8ebf4;
-  }
+/* 다크모드는 명시적 .dark 클래스에서만 적용 (OS 자동 전환 시 폼 텍스트 유실 방지) */
+.dark {
+  --background: #1a1a2e;
+  --foreground: #e8ebf4;
 }
 
 @theme inline {
@@ -75,6 +74,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -83,6 +83,19 @@ body {
   font-family: 'Pretendard', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 네이티브 input이 OS 다크모드에서 밝은 글자로 상속되는 것 방지 */
+input,
+textarea,
+select {
+  color: var(--color-gray-900);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-gray-500);
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -9,6 +8,7 @@ import {
   AnimatePresence,
   useReducedMotion,
 } from 'framer-motion';
+import { AroLogo } from '@/components/brand/aro-logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -47,23 +47,7 @@ export function LandingHeader() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="/"
-          className="flex items-center gap-2"
-          onClick={() => setOpen(false)}
-        >
-          <Image
-            src="/logo-aro.svg"
-            alt="아로(ARO)"
-            width={32}
-            height={26}
-            priority
-            className="h-7 w-auto"
-          />
-          <span className="text-[1.125rem] font-extrabold tracking-tight text-primary">
-            아로
-          </span>
-        </Link>
+        <AroLogo href="/" size="md" priority />
 
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map((item) => (

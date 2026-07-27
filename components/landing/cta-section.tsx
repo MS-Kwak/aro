@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Clock3, ShieldCheck, Zap } from 'lucide-react';
+import { AroLogo } from '@/components/brand/aro-logo';
 import { Button } from '@/components/ui/button';
 import {
   ScrollReveal,
@@ -23,13 +23,9 @@ export function CtaSection() {
 
       <div className="relative mx-auto max-w-3xl text-center">
         <ScrollReveal>
-          <Image
-            src="/logo-aro-full-white.svg"
-            alt="아로(ARO)"
-            width={140}
-            height={48}
-            className="mx-auto h-10 w-auto sm:h-12"
-          />
+          <div className="flex justify-center">
+            <AroLogo href={null} variant="white" size="lg" />
+          </div>
           <h2 className="mt-7 font-brand text-3xl tracking-tight text-white sm:text-4xl">
             지금 QR 하나로
             <br />

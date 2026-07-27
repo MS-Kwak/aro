@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
+import { AroLogo } from '@/components/brand/aro-logo';
 
 const FOOTER_LINKS = [
   { href: '#how-it-works', label: '이용 방법' },
@@ -14,12 +14,7 @@ export function LandingFooter() {
     <footer className="border-t border-gray-100 bg-gray-100/50 px-4 py-12 sm:px-6">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div className="max-w-sm">
-          <Image
-            src="/logo-aro-full.svg"
-            alt="아로(ARO)"
-            width={88}
-            height={30}
-          />
+          <AroLogo href="/" size="md" />
           <p className="mt-4 text-body leading-relaxed text-gray-500">
             소상공인 AI 마케팅 비서.
             <br />
